@@ -19,11 +19,12 @@ for iter = 1:num_iters
 
 
 
-    theta = theta - alpha * (1/m) * sum((X * theta - y) .* X)';
-
-
-
-
+    %Not optimal
+    %%theta = theta - alpha * (1/m) * sum((X * theta - y) .* X)';
+    
+    %%Optimal
+    
+    theta = theta - alpha * (1/m) * X' * (X * theta - y);
 
 
 
